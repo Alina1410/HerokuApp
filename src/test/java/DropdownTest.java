@@ -15,6 +15,16 @@ public class DropdownTest extends BaseTest {
         driver.get(BASE_URL + "dropdown");
         WebElement dropdown = driver.findElement(By.id("dropdown"));
         Select select = new Select(dropdown);
+        List options = select.getOptions();
+
+        Assert.assertEquals(options.size(), 3);
+
+        select.selectByIndex(1);
+        Assert.assertEquals(select.getFirstSelectedOption().getText(),"Option 1");
+
+        select.selectByIndex(2);
+        Assert.assertEquals(select.getFirstSelectedOption().getText(),"Option 2");
+
 
 
     }
