@@ -10,4 +10,8 @@ public class FileDownloaderPage extends BasePage {
     public FileDownloaderPage(WebDriver driver) {
         super(driver);
     }
+
+    public void openFileDownloader(){
+        driver.get("http://the-internet.herokuapp.com/download");
+    }
 }

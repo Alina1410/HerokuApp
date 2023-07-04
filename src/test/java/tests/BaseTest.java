@@ -25,7 +25,7 @@ public class BaseTest {
     WebDriver driver;
 
     String BASE_URL = "https://the-internet.herokuapp.com/";
-    String pathToDownload = System.getProperty("user.dir") + "src/test/downloads";
+    String pathToDownload = System.getProperty("user.dir") + "\\src\\test\\downloads";
     String nameDownloaderFile;
 
     int wait = 15000;
@@ -38,6 +38,7 @@ public class BaseTest {
     FramesPage framesPage;
 
     FileDownloaderPage fileDownloaderPage;
+
 
     @BeforeMethod
     public void setUp() {
